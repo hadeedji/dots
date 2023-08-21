@@ -1,0 +1,19 @@
+function zsh_add_plugin() {
+    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
+
+    [ ! -d "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME" ] &&
+    git clone "https://github.com/$1.git" "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME"
+
+    safe_source "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
+    safe_source "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
+}
+
+function cc() python -c "from math import *; print($*)"
+function mkcd() mkdir -p -- $1 && cd -- $1
+
+function serve() {
+    gem list -i '^webrick$' > /dev/null || gem install webrick
+    ruby -run -e httpd . -p 3000
+}
+
+# vim: filetype=zsh

@@ -1,0 +1,21 @@
+alias p='sudo pacman -S'
+alias pu='sudo pacman -Syu'
+
+alias vi='nvim'
+alias vif='nvim +"norm 1 tf" +startinsert'
+alias vic='nvim +"norm 1 tc" +startinsert'
+
+alias l='exa -x --group-directories-first --icons'
+alias ll='l -lbh --git --no-time'
+alias lt='ll --tree'
+
+alias la='l -a'
+alias lla='ll -a'
+alias lta='lt -a --ignore-glob=".git"'
+
+alias cc='noglob cc'
+alias wcl='wc -l'
+
+alias s='kitty +kitten ssh'
+
+# vim: filetype=zsh

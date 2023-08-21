@@ -1,0 +1,27 @@
+create_dir "$HOME/.local/state/zsh"
+
+HISTFILE="$HOME/.local/state/zsh/history"
+HISTSIZE=65536
+SAVEHIST=$HISTSIZE
+
+setopt AUTO_CD
+setopt HIST_IGNORE_DUPS
+setopt HIST_VERIFY
+setopt INC_APPEND_HISTORY
+setopt RM_STAR_SILENT
+setopt NO_BEEP
+
+stty stop undef
+zle_highlight=("paste:none")
+
+if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+else
+    [ ! -d "$HOME/.local/share/zsh/plugins/pure" ] &&
+    git clone "https://github.com/sindresorhus/pure" "$HOME/.local/share/zsh/plugins/pure"
+
+    fpath+="$HOME/.local/share/zsh/plugins/pure"
+    safe_source "$HOME/.local/share/zsh/plugins/pure/pure.zsh"
+fi
+
+# vim: filetype=zsh

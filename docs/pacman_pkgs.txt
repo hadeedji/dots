@@ -1,0 +1,11 @@
+bat
+exa
+fd
+kitty
+neovim
+qmk
+ripgrep
+starship
+unclutter
+xclip
+zsh

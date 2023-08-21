@@ -1,0 +1,23 @@
+[init]
+    defaultBranch = main
+
+[user]
+    email = hadeedji@gmail.com
+    name  = Hadeed Ahmad
+
+[alias]
+    s = status -u
+    a = add
+    aa = add -A
+    c = commit
+    ca = commit --amend --no-edit
+    p = push
+    pf = push -f
+    ac = !git aa && git c
+    aca = !git aa && git ca
+    acp = !git ac && git p
+    acap = !git aca && git pf
+    l = log --all --decorate --oneline --graph -n 20
+    cfc = !git clone $(xclip -out -sel clip)
+
+# vim: filetype=gitconfig

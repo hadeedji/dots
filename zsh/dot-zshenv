@@ -1,0 +1,9 @@
+typeset -U path
+path+="$HOME/bin"
+
+export DOTS="$HOME/repos/dots"
+
+export VISUAL="nvim"
+export EDITOR="nvim"
+
+# vim: filetype=zsh
