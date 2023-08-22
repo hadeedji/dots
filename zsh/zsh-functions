@@ -16,4 +16,9 @@ function serve() {
     ruby -run -e httpd . -p 3000
 }
 
+function save-ssh-key() {
+    mv "$1" "$HOME/.ssh/${1}_${2}"
+    mv "$1.pub" "$HOME/.ssh/${1}_${2}.pub"
+}
+
 # vim: filetype=zsh
