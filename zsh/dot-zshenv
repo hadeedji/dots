@@ -1,7 +1,7 @@
 typeset -U path
 path+="$HOME/bin"
 
-export DOTS="$HOME/repos/dots"
+export DOTS="$HOME/docs/repos/dots"
 
 export VISUAL="nvim"
 export EDITOR="nvim"

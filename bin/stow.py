@@ -22,7 +22,7 @@ def stow(pkg, stow_dir):
             source = os.path.join(root, file)
             target = os.path.join(symlink_dir, re.sub("^dot-", ".", file))
 
-            if os.path.exists(target):
+            if os.path.isfile(target) or os.path.islink(target):
                 os.remove(target)
 
             os.symlink(source, target)
