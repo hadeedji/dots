@@ -6,6 +6,8 @@ neovim
 qmk
 ripgrep
 starship
+ttf-jetbrains-mono
+ttf-nerd-fonts-symbols
 unclutter
 xclip
 zsh
