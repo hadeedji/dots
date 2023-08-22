@@ -22,7 +22,7 @@ return {
           hide_parent_dir = true,
           hijack_netrw = true,
           initial_mode = "normal",
-          respect_gitignore = "false",
+          respect_gitignore = false,
           sorting_strategy = "ascending",
           layout_config = {
             prompt_position = "top"
