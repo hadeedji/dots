@@ -43,9 +43,10 @@ def get_pkgs():
 
 def get_stow_dir(pkg):
     return os.path.expanduser({
-        "home"   : "~",
-        "bin"   : "~/bin",
-        "config" : "~/.config"
+        "home"       : "~",
+        "bin"        : "~/bin",
+        "config"     : "~/.config",
+        "wallpapers" : "~/pics/wallpapers"
     }.get(pkg, f"~/.config/{pkg}"))
 
 if __name__ == "__main__":
