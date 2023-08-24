@@ -21,4 +21,8 @@ function save-ssh-key() {
     mv "$1.pub" "$HOME/.ssh/${1}_${2}.pub"
 }
 
+function eik() {
+    kitten edit-in-kitty "$1"
+}
+
 # vim: filetype=zsh
