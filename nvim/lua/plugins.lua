@@ -20,5 +20,6 @@ return {
   { "nvim-lualine/lualine.nvim", config = true },
   { "windwp/nvim-autopairs",     config = true },
 
-  "fladson/vim-kitty"
+  "fladson/vim-kitty",
+  "tpope/vim-unimpaired"
 }
