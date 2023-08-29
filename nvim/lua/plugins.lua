@@ -9,7 +9,7 @@ return {
   {
     "ggandor/leap.nvim",
     config = function()
-      require("leap").set_default_keymaps()
+      require("leap").add_default_mappings()
       vim.api.nvim_set_hl(0, 'LeapBackdrop', { link = 'Comment' })
     end
   },
@@ -21,5 +21,6 @@ return {
   { "windwp/nvim-autopairs",     config = true },
 
   "fladson/vim-kitty",
-  "tpope/vim-unimpaired"
+  "tpope/vim-unimpaired",
+  "neovim/nvim-lspconfig"
 }
