@@ -2,8 +2,6 @@ alias p='sudo pacman -S'
 alias pu='sudo pacman -Syu'
 
 alias vi='nvim'
-alias vif='nvim +"norm 1 tf" +startinsert'
-alias vic='nvim +"norm 1 tc" +startinsert'
 
 alias l='exa -x --group-directories-first --icons'
 alias ll='l -lbh --git --no-time'

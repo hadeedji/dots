@@ -14,6 +14,13 @@ return {
     end
   },
 
+  {
+    "ThePrimeagen/harpoon",
+    config = function()
+      require("keymaps").harpoon()
+    end
+  },
+
   { "abecodes/tabout.nvim", dependencies = { "nvim-treesitter" }, config = true },
 
   { "numToStr/Comment.nvim",     config = true },
@@ -21,6 +28,5 @@ return {
   { "windwp/nvim-autopairs",     config = true },
 
   "fladson/vim-kitty",
-  "tpope/vim-unimpaired",
-  "neovim/nvim-lspconfig"
+  "tpope/vim-unimpaired"
 }
