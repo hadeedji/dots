@@ -11,6 +11,8 @@ setopt INC_APPEND_HISTORY
 setopt RM_STAR_SILENT
 setopt NO_BEEP
 
+bindkey -e
+
 stty stop undef
 zle_highlight=("paste:none")
 

@@ -11,7 +11,7 @@ return {
 
     cmp.setup {
       mapping = cmp.mapping.preset.insert {
-        ["<C-K>"] = function(fallback)
+        ["<C-Y>"] = function(fallback)
           if cmp.visible() then
             cmp.confirm { select=true }
           else

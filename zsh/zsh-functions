@@ -1,20 +1,5 @@
-function zsh_add_plugin() {
-    PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-
-    [ ! -d "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME" ] &&
-    git clone "https://github.com/$1.git" "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME"
-
-    safe_source "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
-    safe_source "$HOME/.local/share/zsh/plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
-}
-
 function cc() python -c "from math import *; print($*)"
 function mkcd() mkdir -p -- $1 && cd -- $1
-
-function serve() {
-    gem list -i '^webrick$' > /dev/null || gem install webrick
-    ruby -run -e httpd . -p 3000
-}
 
 function save-ssh-key() {
     mv "$1" "$HOME/.ssh/${1}_${2}"
@@ -24,5 +9,16 @@ function save-ssh-key() {
 function eik() {
     kitten edit-in-kitty "$1"
 }
+
+function find-directory() {
+    FOLDER=$(fd -t d --hidden | fzf --height "50%" --reverse)
+    if [ -n "$FOLDER" ]; then 
+        BUFFER="cd $FOLDER"
+        zle .accept-line
+    else
+        zle reset-prompt
+    fi
+}
+zle -N find-directory
 
 # vim: filetype=zsh

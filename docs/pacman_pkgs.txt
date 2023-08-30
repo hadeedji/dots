@@ -1,4 +1,6 @@
 bat
+bear
+ccls
 exa
 fd
 kitty
