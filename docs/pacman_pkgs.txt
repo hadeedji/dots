@@ -5,6 +5,8 @@ exa
 fd
 kitty
 neovim
+python-pillow
+python-pygments
 qmk
 ripgrep
 starship
@@ -12,4 +14,5 @@ ttf-jetbrains-mono
 ttf-nerd-fonts-symbols
 unclutter
 xclip
+zola
 zsh
