@@ -20,17 +20,18 @@ function M.harpoon()
   vim.keymap.set("", "<leader>ha", require("harpoon.mark").add_file)
   vim.keymap.set("", "<leader>ho", require("harpoon.ui").toggle_quick_menu)
 
-  vim.keymap.set("", "<leader>hn", function() require("harpoon.ui").nav_file(1) end)
-  vim.keymap.set("", "<leader>hk", function() require("harpoon.ui").nav_file(2) end)
-  vim.keymap.set("", "<leader>hi", function() require("harpoon.ui").nav_file(3) end)
+  vim.keymap.set("", "<leader>he", function() require("harpoon.ui").nav_file(1) end)
+  vim.keymap.set("", "<leader>hi", function() require("harpoon.ui").nav_file(2) end)
 end
 
 function M.lsp(env)
   local opts = { buffer = env.buffer }
 
-  vim.keymap.set("", "<leader>en", vim.diagnostic.goto_next, opts)
-  vim.keymap.set("", "<leader>ep", vim.diagnostic.goto_prev, opts)
-  vim.keymap.set("", "<leader>ee", vim.diagnostic.open_float, opts)
+  vim.keymap.set("", "<leader>dn", vim.diagnostic.goto_next, opts)
+  vim.keymap.set("", "<leader>dp", vim.diagnostic.goto_prev, opts)
+  vim.keymap.set("", "<leader>de", vim.diagnostic.open_float, opts)
+  vim.keymap.set("", "<leader>df", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("", "<leader>rn", vim.lsp.buf.rename, opts)
 end
 
 ------------------------------------------------------------------------------
