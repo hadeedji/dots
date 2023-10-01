@@ -4,5 +4,11 @@ compinit -d "$HOME/.cache/zsh/zcompdump"
 zmodload zsh/complist
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*:git-*:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+zstyle ':fzf-tab:*' fzf-bindings 'space:accept'
+zstyle ':fzf-tab:*' accept-line enter
 
 # vim: filetype=zsh
