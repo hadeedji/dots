@@ -1,12 +1,17 @@
 #! /usr/bin/env python3
 
 import os
+import shutil
 import subprocess
 import sys
 
 font_file = "/usr/share/fonts/TTF/SymbolsNerdFontMono-Regular.ttf"
 if not os.path.exists(font_file):
-    sys.stderr.write(f"Error: The font file does not exist.\n")
+    sys.stderr.write("Error: The font file does not exist.\n")
+    sys.exit(1)
+
+if shutil.which("otfinfo") is None:
+    sys.stderr.write("Error: otfinfo not found.\n")
     sys.exit(1)
 
 def create_maps(numbers):
