@@ -32,10 +32,12 @@ function M.lsp(env)
   vim.keymap.set("", "<leader>de", vim.diagnostic.open_float, opts)
   vim.keymap.set("", "<leader>df", vim.lsp.buf.code_action, opts)
   vim.keymap.set("", "<leader>rn", vim.lsp.buf.rename, opts)
+  vim.keymap.set("", "<leader>gD", vim.lsp.buf.declaration, opts)
+  vim.keymap.set("", "<leader>gd", vim.lsp.buf.definition, opts)
 end
 
 ------------------------------------------------------------------------------
--- Not plugin related                                                       --
+-- Misc                                                                     --
 ------------------------------------------------------------------------------
 
 local function swap(a, b)

@@ -13,7 +13,7 @@ function eik() {
 function find-directory() {
     FOLDER=$(fd -t d --hidden | fzf --height "50%" --reverse)
     if [ -n "$FOLDER" ]; then 
-        BUFFER="cd $FOLDER"
+        BUFFER="cd $FOLDER; l"
         zle .accept-line
     else
         zle reset-prompt
