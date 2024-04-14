@@ -2,8 +2,14 @@ function cc() python -c "from math import *; print($*)"
 function mkcd() mkdir -p -- $1 && cd -- $1
 
 function save-ssh-key() {
+    mkdir -p "$HOME/.ssh"
+    chmod 700 "$HOME/.ssh"
+
     mv "$1" "$HOME/.ssh/${1}_${2}"
-    mv "$1.pub" "$HOME/.ssh/${1}_${2}.pub"
+
+    if [ -e "$1.pub" ]; then
+        mv -n "$1.pub" "$HOME/.ssh/${1}_${2}.pub"
+    fi
 }
 
 function eik() {
