@@ -9,3 +9,5 @@ ttf-jetbrains-mono
 ttf-nerd-fonts-symbols-mono
 xclip
 zsh
+
+# texlive-bin=2023.66984-8
