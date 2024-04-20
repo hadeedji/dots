@@ -42,7 +42,7 @@ return {
   { "nvim-lualine/lualine.nvim", config = true },
   { "windwp/nvim-autopairs",     config = true },
 
-  "tpope/vim-fugitive",
+  {"tpope/vim-fugitive", config = require("keymaps").fugitive},
   "tpope/vim-repeat",
   "tpope/vim-surround",
   "tpope/vim-unimpaired",
