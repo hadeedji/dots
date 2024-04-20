@@ -1,6 +1,7 @@
 bat
 exa
 fd
+grub-customizer
 kitty
 neovim
 ripgrep
