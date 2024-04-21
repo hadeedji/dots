@@ -9,6 +9,7 @@ starship
 ttf-jetbrains-mono
 ttf-nerd-fonts-symbols-mono
 xclip
+xdg-desktop-portal-gnome
 zsh
 
 # texlive-bin=2023.66984-8
