@@ -39,7 +39,7 @@ window_map("j")
 window_map("k")
 window_map("l")
 
-nvim_create_user_command("Format", "normal mzgg=G'zzz")
+vim.api.nvim_create_user_command("Format", "normal mzgg=G'zzz", {})
 
 ------------------------------------------------------------------------------
 -- Plugin Maps                                                              --
