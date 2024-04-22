@@ -20,7 +20,7 @@ if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
 else
     [ ! -d "$HOME/.local/share/zsh/plugins/pure" ] &&
-    git clone "https://github.com/sindresorhus/pure" "$HOME/.local/share/zsh/plugins/pure"
+        git clone "https://github.com/sindresorhus/pure" "$HOME/.local/share/zsh/plugins/pure"
 
     fpath+="$HOME/.local/share/zsh/plugins/pure"
     safe_source "$HOME/.local/share/zsh/plugins/pure/pure.zsh"

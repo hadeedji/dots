@@ -4,6 +4,7 @@ fd
 grub-customizer
 kitty
 neovim
+qmk
 ripgrep
 starship
 ttf-jetbrains-mono

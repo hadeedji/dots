@@ -1,6 +1,5 @@
 typeset -U path
 path+="$HOME/bin"
-path+="$HOME/.local/npm/bin"
 
 export DOTS="$HOME/docs/repos/dots"
 
@@ -8,5 +7,8 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 
 export npm_config_prefix="$HOME/.local/npm"
+path+="$HOME/.local/npm/bin"
+
+path+="$HOME/.dotnet/tools"
 
 # vim: filetype=zsh
