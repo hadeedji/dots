@@ -6,6 +6,10 @@ export DOTS="$HOME/docs/repos/dots"
 export VISUAL="nvim"
 export EDITOR="nvim"
 
+if command -v pyenv &> /dev/null; then
+    eval "$(pyenv init -)"
+fi
+
 export npm_config_prefix="$HOME/.local/npm"
 path+="$HOME/.local/npm/bin"
 

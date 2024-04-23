@@ -4,6 +4,7 @@ fd
 grub-customizer
 kitty
 neovim
+pyenv
 qmk
 ripgrep
 starship
