@@ -1,4 +1,6 @@
 bat
+docker
+docker-compose
 exa
 fd
 grub-customizer
