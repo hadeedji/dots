@@ -39,7 +39,13 @@ window_map("j")
 window_map("k")
 window_map("l")
 
-vim.api.nvim_create_user_command("Format", "normal mzgg=G'zzz", {})
+vim.api.nvim_create_user_command("Format", function()
+  if vim.bo.formatprg ~= "" then
+    vim.cmd [[normal mzgggqG'zzz]]
+  else
+    vim.cmd [[normal mzgg=G'zzz]]
+  end
+end, {})
 
 ------------------------------------------------------------------------------
 -- Plugin Maps                                                              --
