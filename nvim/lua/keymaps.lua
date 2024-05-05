@@ -7,6 +7,7 @@ vim.keymap.set("i", "kj", "<ESC>")
 
 vim.keymap.set("", "<leader>q", "<CMD>confirm quit<CR>")
 vim.keymap.set("", "<leader>x", "<CMD>exit<CR>")
+vim.keymap.set("", "<leader>ww", "<CMD>write<CR>")
 vim.keymap.set("", "<leader><leader>x", "<CMD>write<BAR>source %<CR>")
 
 vim.keymap.set("", "n", "nzz")
@@ -38,14 +39,6 @@ window_map("h")
 window_map("j")
 window_map("k")
 window_map("l")
-
-vim.api.nvim_create_user_command("Format", function()
-  if vim.bo.formatprg ~= "" then
-    vim.cmd [[normal mzgggqG'zzz]]
-  else
-    vim.cmd [[normal mzgg=G'zzz]]
-  end
-end, {})
 
 ------------------------------------------------------------------------------
 -- Plugin Maps                                                              --

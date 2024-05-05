@@ -17,7 +17,7 @@ function eik() {
 }
 
 function find-directory() {
-    FOLDER=$(fd -t d --hidden | fzf --height "50%" --reverse)
+    FOLDER=$(fd -t d --hidden | fzf --height="~50%" --reverse)
     if [ -n "$FOLDER" ]; then 
         BUFFER="cd $FOLDER; l"
         zle .accept-line
@@ -26,5 +26,17 @@ function find-directory() {
     fi
 }
 zle -N find-directory
+
+function forgejo_clone() {
+    local repo_name
+    repo_name=$(curl -X GET "https://git.hadeedahmad.xyz/api/v1/user/repos" \
+                     -H "Authorization: token ${FORGEJO_API_KEY}" \
+                     --silent | jq -r ".[].name" | fzf --height="~50%" --reverse)
+
+    if [ -n "$repo_name" ]; then
+        git clone "forgejo:hadeed/$repo_name"
+    fi
+}
+zle -N forgejo_clone
 
 # vim: filetype=zsh

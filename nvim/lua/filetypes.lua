@@ -24,14 +24,10 @@ vim.api.nvim_create_autocmd("Filetype", {
 
 vim.api.nvim_create_autocmd("Filetype", {
   group = vim.api.nvim_create_augroup("webDev", {}),
-  pattern = { "html", "css", "javascript", "javascriptreact" },
+  pattern = { "html", "css", "javascript", "javascriptreact", "json" },
   callback = function()
     vim.cmd [[setlocal tabstop=2 softtabstop=2 shiftwidth=2]]
-    vim.bo.formatprg = "npx prettier --stdin-filepath %"
-
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      command = "Format",
-      buffer = 0
-    })
+    vim.bo.formatprg = "prettier --stdin-filepath " .. vim.fn.expand("%:p")
+    require("minimal-format").toggle_autocmd(0)
   end
 })

@@ -15,4 +15,9 @@ path+="$HOME/.local/npm/bin"
 
 path+="$HOME/.dotnet/tools"
 
+if [ -f "$ZDOTDIR/zsh-secrets" ]; then
+    source "$ZDOTDIR/zsh-secrets"
+fi
+
+
 # vim: filetype=zsh

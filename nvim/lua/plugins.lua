@@ -48,4 +48,5 @@ return {
   "tpope/vim-unimpaired",
 
   "fladson/vim-kitty",
+  "cljoly/minimal-format.nvim"
 }
