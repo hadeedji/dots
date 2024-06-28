@@ -5,6 +5,9 @@
     email = hadeedji@gmail.com
     name  = Hadeed Ahmad
 
+[push]
+    autoSetupRemote = true
+
 [alias]
     s = status -u
     a = add
